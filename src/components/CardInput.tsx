@@ -9,6 +9,9 @@ interface TitleProps {
 interface InputProps {
     placeholder?: string;
     size?: string;
+    type?: string;
+    value?: string;
+    changeInput?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 
@@ -26,9 +29,13 @@ function Title({ title } : TitleProps) {
 
 }
 
-function Input({ placeholder, size }: InputProps) {
+function Input({ placeholder, size, type = 'text', value, changeInput }: InputProps) {
+    const onInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        changeInput?.(e.currentTarget.value);
+    }
+
     return (<div className={`input-box ${size}`}>
-        <input className="input-basic" type="text" placeholder={placeholder} />
+        <input className="input-basic" type={type} placeholder={placeholder} value={value} onInput={onInput} />
     </div>);
 }
 

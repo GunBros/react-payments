@@ -1,9 +1,11 @@
-import React from 'react';
+import { CardNumberProvider } from './contexts/CardNumberProvider';
 import CardEnrollment from './pages/CardEnrollment';
 
 function App() {
   return (
-    <CardEnrollment/>
+    <CardNumberProvider>  
+      <CardEnrollment />
+    </CardNumberProvider>
   );
 }
 
