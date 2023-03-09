@@ -134,3 +134,8 @@
   vertical-align: middle;
   font-weight: 400;
 }
+
+.card-password-container {
+  display: flex;
+  gap: 10px;
+}
