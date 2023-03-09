@@ -1,14 +1,9 @@
 import CardInput from './CardInput'
 
-
-interface CardNumberInputProps {
-    title: string;
-}
-
-function CardNumberInput({ title } : CardNumberInputProps) {
+function CardNumberInput() {
     return (
         <CardInput>
-                <CardInput.Title title={title} />
+                <CardInput.Title  title={'카드 번호'} />
                 <CardInput.Input />
         </CardInput>
     )

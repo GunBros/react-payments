@@ -1,13 +1,9 @@
 import CardInput from "./CardInput"
 
-interface CardExpireDateInputProps {
-    title: string;
-}
-
-function CardExpireDateInput({ title }: CardExpireDateInputProps) {
+function CardExpireDateInput() {
     return (
         <CardInput>
-            <CardInput.Title title={title} />
+            <CardInput.Title title={'만료일'}  />
             <CardInput.Input size='w-50'/>
         </CardInput>
   )
