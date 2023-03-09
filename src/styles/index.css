@@ -4,7 +4,12 @@
 @import "./modal.css";
 @import "./utils.css";
 
+* {
+  margin: 0px;
+}
+
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -13,11 +18,17 @@ body {
   background-color: #e5e5e5;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 input {
   font-size: 16px;
 }
 
-.root {
+.enrollment-page {
   background-color: #fff;
   width: 375px;
   min-width: 375px;
@@ -26,7 +37,7 @@ input {
   border-radius: 15px;
 }
 
-.app {
+.enrollment-container {
   height: 100%;
   padding: 16px 24px;
 }
